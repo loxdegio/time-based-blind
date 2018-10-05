@@ -12,7 +12,7 @@ L'unico parametro passato è un campo chiamato email.
 Testando questo campo con un payload come "lorenzo@degioanni.it" la risposta è immediata, mentre con uno come "' OR 1 = 1 AND SLEEP(5) -- -"
 la risposta arriva in ritardo di almeno 5 secondi come previsto.
 
-Dopo aver verificato che la pagina è vulnerabile all'attacco richiesto ho cominciato ad elaborare l'attacco generando uno script pyhon che 
+Dopo aver verificato che la pagina è vulnerabile all'attacco richiesto ho cominciato ad elaborare l'attacco generando uno script python che 
 deve essere eseguito in più passaggi:
 
 Visto che, il campo era una stringa ho pensato di "wrappare" le query di payload, elencate nel [README.md](README.md) 
@@ -32,7 +32,7 @@ esadecimale dei singoli caratteri del nome del database target.
 
 (vedere query (2.)  count ed extraction per recupero tabelle nel [README.md](README.md) generale)
 
-Estraendo la lista delle tabelle ottengo che il database ne contiene 3:
+Il database contiene 3 tabelle:
 - accounts
 - datacapture
 - messages
@@ -40,7 +40,7 @@ Estraendo la lista delle tabelle ottengo che il database ne contiene 3:
 La consegna richiede il recupero dei dati dalla tabella accounts e ho pensato di concatenare con un ':' tutte le colonne per fare 
 un'estrazione unica dei dati necessari.
 Ho pensato quindi che mi servisse conoscere prima l'anatomia della tabella target estraendo nomi e tipo delle colonne componenti.
-Per usare come parametro di ricerca il nome della tabella ho usato la stessa tecnica utilizzata per il passaggio del nome del database
+Per usare come parametro di ricerca il nome della tabella ho usato la stessa tecnica utilizzata per il passaggio del nome del database.
 
 (vedere query (3.) count ed extraction per recupero nomi colonne nel [README.md](README.md) generale)
 
@@ -51,9 +51,9 @@ In questo modo ottengo la lista dei nomi delle colonne e dei loro relativi tipi 
 - email:varchar
 - password:varchar
 
-A questo punto posso passare la lista dei comandi allo script per estrarre i valori richiesti dalla consegna riportata nel [README.md](README.md) generale.
+A questo punto posso passare la lista delle colonne allo script per estrarre i valori richiesti dalla consegna riportata nel [README.md](README.md) generale.
 
 (vedere query (4.) count ed extraction per recupero dati della tabella nel [README.md](README.md) generale)
 
 Ho incluso nel repository il file [time-based_blind.sh](time-based_blind.sh) che ripercorre tutti i passaggi effettuati per l'estrazione dei dati anche dalla pagina 
-http://[[CyberGym host]]/sqli/time_based_blind.php che riepiloga tutti i passaggi necessari per l'estrazione
+http://[[CyberGym host]]/sqli/time_based_blind.php che riepiloga tutti i passaggi necessari per l'estrazione.
