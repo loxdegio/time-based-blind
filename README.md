@@ -13,7 +13,7 @@ Lo script scritto per la loro risoluzione è il [blind_sqli.py](blind_sqli.py) (
 I dati di login recuperati dalla tabella accounts sono i seguenti:
 
 email            | password(sha1)                           | password in chiaro
-----------------------------------------------------------------------------------------------------------------------
+-----------------|------------------------------------------|-------------------
 arthur@guide.com | d00ee262cdcbe7543210bb85f6f1cac257b4e994 | Bathrobe
 ford@guide.com   | 30f5cc99c17426a0d28acf8905c6d776039ad022 | Betelgeuse
 tricia@guide.com | bcb3358e273b5772ee0ae1799b612e13cc726b04 | Trillian
