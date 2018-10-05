@@ -22,7 +22,7 @@ zaphod@guide.com | 0c38530eaca4dbc0f49c459c0c52b362f14215c3 | Pan-GalacticGargle
 Le password in chiaro sono state ottenute attraverso lo script [Hash Buster v3.0](https://github.com/s0md3v/Hash-Buster)
 
 Per entrambe le challenge è stato usato lo stesso numero di coppie di query, per le quali è stato modificato il "wrapping"
-in modo generare il payload a seconda della tipologia di parametro che si andava a sfruttare:
+in modo da generare il payload a seconda della tipologia di parametro che si andava a sfruttare:
 
 1. recupero database:
 	- count: "SELECT * FROM (SELECT COUNT(*) AS n_databases FROM information_schema.schemata)x WHERE x.n_databases = {} AND SLEEP(0.1)"
@@ -38,12 +38,11 @@ in modo generare il payload a seconda della tipologia di parametro che si andava
 	- extracton: "SELECT * FROM(SELECT CONCAT(" + columns_concat + ") AS data FROM " + db + '.' + table + " LIMIT {},1)x WHERE MID(x.data,{},1) = {} AND SLEEP(0.1)"
 	
 dove:
-	- database_hex: lista dei caratteri, separati da virgola, in codifica esadecimale da passare a concat per il bypass di 
-					mysql_real_escape_string
+	- database_hex: lista dei caratteri, separati da virgola, in codifica esadecimale da passare a concat per il bypass di mysql_real_escape_string
 	- table_hex: stessa cosa, ma per il nome della tabella passata in input
 	
 Infine, dall'analisi del jitter delle risposte ho notato che (nel mio ambiente locale, virtualizzato) questo era molto oscillante, ma comunque
 si attestava sempre sotto i 0.1 secondi, portandomi a supporre questo valore come sufficiente per una corretta estrazione dei risultati cercati
 per entrambe le challenge
 
-Ho incluso nel repository due file .sh che ripercorrono che riepilogano tutti i passaggi necessari per l'estrazione.
+Ho incluso nel repository due file .sh che riepilogano tutti i passaggi necessari per l'estrazione.
