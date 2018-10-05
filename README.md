@@ -38,8 +38,8 @@ in modo da generare il payload a seconda della tipologia di parametro che si and
 	- extracton: "SELECT * FROM(SELECT CONCAT(" + columns_concat + ") AS data FROM " + db + '.' + table + " LIMIT {},1)x WHERE MID(x.data,{},1) = {} AND SLEEP(0.1)"
 	
 dove:
-	- database_hex: lista dei caratteri, separati da virgola, in codifica esadecimale da passare a concat per il bypass di mysql_real_escape_string
-	- table_hex: stessa cosa, ma per il nome della tabella passata in input
+- database_hex: lista dei caratteri, separati da virgola, in codifica esadecimale da passare a concat per il bypass di mysql_real_escape_string
+- table_hex: stessa cosa, ma per il nome della tabella passata in input
 	
 Infine, dall'analisi del jitter delle risposte ho notato che (nel mio ambiente locale, virtualizzato) questo era molto oscillante, ma comunque
 si attestava sempre sotto i 0.1 secondi, portandomi a supporre questo valore come sufficiente per una corretta estrazione dei risultati cercati
