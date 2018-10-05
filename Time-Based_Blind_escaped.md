@@ -12,4 +12,4 @@ Come differenza dallo script per la prima challenge ho dovuto prevedere la possi
 lo stesso script python.
 
 Ho incluso nel repository il file [time-based_blind_escaped.sh](time-based_blind_escaped.sh) che ripercorre tutti i passaggi effettuati per l'estrazione dei dati anche dalla pagina 
-http://[[CyberGym host]]/sqli/time_based_blind_escaped.php che riepiloga tutti i passaggi necessari per l'estrazione
+http://[[CyberGym host]]/sqli/time_based_blind_escaped.php che riepiloga tutti i passaggi necessari per l'estrazione.
