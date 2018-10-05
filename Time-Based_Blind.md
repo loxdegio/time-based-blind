@@ -1,6 +1,6 @@
 ## Time-Based Blind SQLi Challenge (Challenge 1)
 
-La challenge prevedeva di sfruttare la vulnerabilità di SQLi sulla pagina http://<CyberGym host>/sqli/time_based_blind.php
+La challenge prevedeva di sfruttare la vulnerabilità di SQLi sulla pagina http://[[CyberGym host]]/sqli/time_based_blind.php
 della CyberGym.
 
 La pagina si presenta come un form di recupero password con un solo campo per l'immissione della email personale.
@@ -55,5 +55,5 @@ A questo punto posso passare la lista dei comandi allo script per estrarre i val
 
 (vedere query (4.) count ed extraction per recupero dati della tabella nel [README.md](README.md) generale)
 
-Ho incluso nel repository il file [time_based_blind.sh](time_based_blind.sh) che ripercorre tutti i passaggi effettuati per l'estrazione dei dati anche dalla pagina 
-http://<CyberGym host>/sqli/time_based_blind.php che riepiloga tutti i passaggi necessari per l'estrazione
+Ho incluso nel repository il file [time-based_blind.sh](time-based_blind.sh) che ripercorre tutti i passaggi effettuati per l'estrazione dei dati anche dalla pagina 
+http://[[CyberGym host]]/sqli/time_based_blind.php che riepiloga tutti i passaggi necessari per l'estrazione
