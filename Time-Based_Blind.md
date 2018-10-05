@@ -51,7 +51,7 @@ In questo modo ottengo la lista dei nomi delle colonne e dei loro relativi tipi 
 - email:varchar
 - password:varchar
 
-A questo punto posso passare la lista dei comandi allo script per estrarre i valori riciesti dalla consegna riportata nel [README.md](README.md) generale.
+A questo punto posso passare la lista dei comandi allo script per estrarre i valori richiesti dalla consegna riportata nel [README.md](README.md) generale.
 
 (vedere query (4.) count ed extraction per recupero dati della tabella nel [README.md](README.md) generale)
 
