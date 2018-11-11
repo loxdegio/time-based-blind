@@ -21,3 +21,7 @@ arthur@guide.com | d00ee262cdcbe7543210bb85f6f1cac257b4e994 | Bathrobe
 ford@guide.com   | 30f5cc99c17426a0d28acf8905c6d776039ad022 | Betelgeuse
 tricia@guide.com | bcb3358e273b5772ee0ae1799b612e13cc726b04 | Trillian
 zaphod@guide.com | 0c38530eaca4dbc0f49c459c0c52b362f14215c3 | Pan-GalacticGargleBlaster
+
+The plaintext passwords were obtained through the [https://github.com/s0md3v/Hash-Buster] (Hash Buster v3.0) tool
+
+Finally, from the analysis of the jitter of the responses I noticed that (in my local environment, virtualized) this was very oscillating, but anyway it always stood below 0.1 seconds, leading me to suppose this value as sufficient for a correct extraction of the searched results for both challenges

